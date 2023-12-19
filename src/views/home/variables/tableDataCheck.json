@@ -1,32 +1,42 @@
 [
   {
-    "name": ["Marketplace", false],
-    "quantity": 2458,
-    "date": "Apr 26, 2022",
-    "progress": 75.5
+    "name": [
+      "Maninder Singh",
+      "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2244&q=80"
+    ],
+    "location": "9821",
+    "temperature": 30,
+    "wind_speed": 15,
+    "snow_density": 50
   },
   {
-    "name": ["Venus DB PRO", true],
-    "quantity": 1485,
-    "date": "Jul 20, 2022",
-    "progress": 35.4
+    "name": [
+      "Mukesh Agarwal",
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+    ],
+    "location": "9821",
+    "temperature": 30,
+    "wind_speed": 15,
+    "snow_density": 50
   },
   {
-    "name": ["Venus DS", true],
-    "quantity": 1024,
-    "date": "Sep 30, 2022",
-    "progress": 25
+    "name": [
+      "Thippu",
+      "https://images.unsplash.com/photo-1573766064535-6d5d4e62bf9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80"
+    ],
+    "location": "9821",
+    "temperature": 30,
+    "wind_speed": 15,
+    "snow_density": 50
   },
   {
-    "name": ["Venus 3D Asset", true],
-    "quantity": 858,
-    "date": "Oct 24, 2022",
-    "progress": 100
-  },
-  {
-    "name": ["Marketplace", false],
-    "quantity": 258,
-    "date": "Nov 29, 2022",
-    "progress": 75.5
+    "name": [
+      "Arjun Varma",
+      "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
+    ],
+    "location": "9821",
+    "temperature": 30,
+    "wind_speed": 15,
+    "snow_density": 50
   }
 ]
