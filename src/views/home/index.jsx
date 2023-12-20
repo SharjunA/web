@@ -119,15 +119,32 @@ const MapboxComponent = () => {
             // These coordinates outline Maine.
             'coordinates': [
               [
-                [86.8300, 27.9720],
-                [86.8422, 27.9862],
-                [86.8568, 27.9994],
-                [86.8692, 28.026]
+                [76.9269220, 35.5076488],
+                [76.9769220, 35.5076488],
+                // [76.9969220, 35.4876488],
+                [76.9769220, 35.426488],
+                [76.969220, 35.456488],
+                [76.9569220, 35.5216488],
+                [76.9769220, 35.5076488],
               ]
             ]
           }
         }
       });
+
+
+      // Add a black outline around the polygon.
+      map.addLayer({
+        'id': 'outline',
+        'type': 'line',
+        'source': 'maine',
+        'layout': {},
+        'paint': {
+          'line-color': '#000',
+          'line-width': 3
+        }
+      });
+
 
       // Add a new layer to visualize the polygon.
       map.addLayer({
@@ -296,7 +313,6 @@ const MapboxComponent = () => {
     </div>
   </div>;
 };
-
 
 
 const Home = () => {

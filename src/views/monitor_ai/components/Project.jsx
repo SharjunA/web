@@ -1,6 +1,7 @@
 import React from "react";
 import { MdModeEditOutline } from "react-icons/md";
 import image from "../../../assets/img/weather_map.jpg";
+import image4 from "../../../assets/img/Snow.jpg";
 import image1 from "assets/img/profile/image1.png";
 import image2 from "assets/img/profile/image2.png";
 import image3 from "assets/img/profile/image3.png";
@@ -18,7 +19,9 @@ const Project = () => {
       <div className="flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
         <div className="flex items-center">
           <div className="">
+            <a href="https://www.eorc.jaxa.jp/theme/NEXRA/index.htm">
             <img className="h-[83px] w-[83px] rounded-lg" src={image} alt="" />
+            </a>
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 dark:text-white">
@@ -50,7 +53,7 @@ const Project = () => {
       <div className="mt-3 flex w-full items-center justify-between rounded-2xl bg-white p-3 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
         <div className="flex items-center">
           <div className="">
-            <img className="h-[83px] w-[83px] rounded-lg" src={image2} alt="" />
+            <img className="h-[83px] w-[83px] rounded-lg" src={image4} alt="" />
           </div>
           <div className="ml-4">
             <p className="text-base font-medium text-navy-700 dark:text-white">
