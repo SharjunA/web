@@ -1,42 +1,47 @@
 [
   {
-    "name": [
-      "Milka Singh",
-      "https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2244&q=80"
-    ],
-    "location": "9821",
-    "temperature": 30,
-    "wind_speed": 15,
-    "snow_density": 50
+    "time": "06:00",
+    "temperature": -11,
+    "precipition": 1.2,
+    "humidity": 10,
+    "wind_speed": 13,
+    "snow_intensity": 2.0,
+    "probability": 11
   },
   {
-    "name": [
-      "Mukesh Agarwal",
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
-    ],
-    "location": "9821",
-    "temperature": 30,
+    "time": "07:00",
+    "temperature": -15,
+    "precipition": 1.1,
+    "humidity": 15,
     "wind_speed": 15,
-    "snow_density": 50
+    "snow_intensity": 1.6,
+    "probability": 10
   },
   {
-    "name": [
-      "Thippu",
-      "https://images.unsplash.com/photo-1573766064535-6d5d4e62bf9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1315&q=80"
-    ],
-    "location": "9821",
-    "temperature": 30,
-    "wind_speed": 15,
-    "snow_density": 50
+    "time": "08:00",
+    "temperature": -12,
+    "precipition": 1.5,
+    "humidity": 20,
+    "wind_speed": 19,
+    "snow_intensity": 1.3,
+    "probability": 30
   },
   {
-    "name": [
-      "Arjun Varma",
-      "https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1780&q=80"
-    ],
-    "location": "9821",
-    "temperature": 30,
-    "wind_speed": 15,
-    "snow_density": 50
+    "time": "09:00",
+    "temperature": -10,
+    "precipition": 1.6,
+    "humidity": 25,
+    "wind_speed": 16,
+    "snow_intensity": 1.1,
+    "probability": 26
+  },
+  {
+    "time": "10:00",
+    "temperature": -6,
+    "precipition": 1.9,
+    "humidity": 30,
+    "wind_speed": 28,
+    "snow_intensity": 0.9,
+    "probability": 38
   }
 ]

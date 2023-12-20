@@ -6,8 +6,7 @@ import Storage from "./components/Storage";
 import Upload from "./components/Upload";
 
 import PieChartCard from "./components/PieChartCard";
-import DailyTraffic from "./components/DailyTraffic";
-import CheckTable from "./components/CheckTable";
+import Daily_Probability from "./components/Daily_Probability";
 
 import { columnsDataCheck } from "./variables/columnsData";
 import tableDataCheck from "./variables/tableDataCheck.json";
@@ -24,15 +23,9 @@ const MonitorAI = () => {
         {/* Traffic chart & Pie Chart */}
 
         <div className="grid grid-cols-1 gap-5 rounded-[20px] md:grid-cols-2">
-          <DailyTraffic />
+          <Daily_Probability />
           <PieChartCard />
         </div>
-      </div>
-      <div>
-        <CheckTable
-          columnsData={columnsDataCheck}
-          tableData={tableDataCheck}
-        />
       </div>
     </div>
   );

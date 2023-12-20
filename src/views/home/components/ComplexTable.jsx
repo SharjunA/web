@@ -82,13 +82,13 @@ const ComplexTable = (props) => {
                           {cell.value}
                         </p>
                       );
-                    } else if (cell.column.Header === "Temperature") {
+                    } else if (cell.column.Header === "Temperature (°C)") {
                       data = (
                         <p className="text-sm font-bold text-navy-700 dark:text-white">
                           {cell.value}
                         </p>
                       );
-                    } else if (cell.column.Header === "Wind Speed") {
+                    } else if (cell.column.Header === "Wind Speed (kmph)") {
                       data = (
                         <p className="text-sm font-bold text-navy-700 dark:text-white">
                           {cell.value}

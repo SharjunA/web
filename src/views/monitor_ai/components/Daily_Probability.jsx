@@ -9,14 +9,9 @@ const DailyTraffic = () => {
       <div className="flex flex-row justify-between">
         <div className="ml-1 pt-2">
           <p className="text-sm font-medium leading-4 text-gray-600">
-            Daily Traffic
+            <strong>Daily Probability</strong>
           </p>
-          <p className="text-[34px] font-bold text-navy-700 dark:text-white">
-            2.579{" "}
-            <span className="text-sm font-medium leading-6 text-gray-600">
-              Visitors
-            </span>
-          </p>
+          <br></br>
         </div>
         <div className="mt-2 flex items-start">
           <div className="flex items-center text-sm text-green-500">

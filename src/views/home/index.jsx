@@ -22,11 +22,14 @@ import tableDataCheck from "./variables/tableDataCheck.json";
 import tableDataComplex from "./variables/tableDataComplex.json";
 import { MapStyle } from "components/card/MapStyle";
 import mapboxgl from 'mapbox-gl';
+import * as Chart from 'chart.js';
+import * as turf from '@turf/turf';
 
 import MapComponent from 'components/locationSearch/mapComponent';
 import LocationInput from 'components/locationSearch/inputField';
 
 import 'mapbox-gl/dist/mapbox-gl.css'; // Import the Mapbox CSS
+import ProfileIcon from 'components/icons/ProfileIcon';
 
 const MapboxComponent = () => {
   const [mapStyle, setMapStyle] = useState("satellite-streets-v12");
@@ -37,7 +40,7 @@ const MapboxComponent = () => {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/' + mapStyle,
-      center: [86.9250,27.9250],
+      center: [76.9869220, 35.5076488],
       zoom: 11,
     });
 
@@ -63,6 +66,92 @@ const MapboxComponent = () => {
         'type': 'geojson',
         'data': 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson'
       });
+
+      new mapboxgl.Marker({ color: "red" })
+        .setLngLat([76.9269220, 35.5076488])
+        .addTo(map);
+      new mapboxgl.Marker({ color: "yellow" })
+        .setLngLat([76.9769220, 35.5076488])
+        .addTo(map);
+      new mapboxgl.Marker({ color: "green" })
+        .setLngLat([76.9969220, 35.4876488])
+        .addTo(map);
+      new mapboxgl.Marker({ color: "black" })
+        .setLngLat([77.0269220, 35.4876488])
+        .addTo(map);
+
+      map.addSource('route', {
+        'type': 'geojson',
+        'data': {
+          'type': 'Feature',
+          'properties': {},
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': [
+              [76.9269220, 35.5076488],
+              [76.9769220, 35.5076488],
+              [76.9969220, 35.4876488],
+              [77.0269220, 35.4876488]
+            ]
+          }
+        }
+      });
+      map.addLayer({
+        'id': 'route',
+        'type': 'line',
+        'source': 'route',
+        'layout': {
+          'line-join': 'round',
+          'line-cap': 'round'
+        },
+        'paint': {
+          'line-color': 'blue',
+          'line-width': 4
+        }
+      });
+
+      map.addSource('maine', {
+        'type': 'geojson',
+        'data': {
+          'type': 'Feature',
+          'geometry': {
+            'type': 'Polygon',
+            // These coordinates outline Maine.
+            'coordinates': [
+              [
+                [86.8300, 27.9720],
+                [86.8422, 27.9862],
+                [86.8568, 27.9994],
+                [86.8692, 28.026]
+              ]
+            ]
+          }
+        }
+      });
+
+      // Add a new layer to visualize the polygon.
+      map.addLayer({
+        'id': 'maine',
+        'type': 'fill',
+        'source': 'maine', // reference the data source
+        'layout': {},
+        'paint': {
+          'fill-color': '#0080ff', // blue color fill
+          'fill-opacity': 0.5
+        }
+      });
+      // Add a black outline around the polygon.
+      map.addLayer({
+        'id': 'outline',
+        'type': 'line',
+        'source': 'maine',
+        'layout': {},
+        'paint': {
+          'line-color': '#000',
+          'line-width': 3
+        }
+      });
+
 
       map.addLayer(
         {
@@ -190,6 +279,8 @@ const MapboxComponent = () => {
       );
     });
 
+
+
     // Cleanup map on component unmount
     return () => map.remove();
   }, [mapStyle]);
@@ -197,6 +288,11 @@ const MapboxComponent = () => {
   return <div id="map" style={{ top: 0, bottom: 0, width: '100%', height: "100%", borderRadius: "12px" }} >
     <div className="absolute z-50 top-1 right-1">
       <MapStyle setMapStyle={setMapStyle} mapStyle={mapStyle} />
+      <div id="chart-container">
+        <div id="chart-inner-container">
+          <canvas id="chart-canvas"></canvas>
+        </div>
+      </div>
     </div>
   </div>;
 };
@@ -236,13 +332,13 @@ const Home = () => {
       <div className="mt-3 flex justify-between w-full" >
         <div className="gap-5 inline-flex overflow-x-scroll w-max">
           <Widget
-            icon={<MdBarChart className="h-5 w-5" />}
-            title={"Batch1"}
-            subtitle={"7 members"}
+            icon={<ProfileIcon className="h-5 w-5" />}
+            title={"Batch 1"}
+            subtitle={"4 members"}
           />
           <Widget
-            icon={<IoDocuments className="h-6 w-6" />}
-            title={"Batch2"}
+            icon={<ProfileIcon className="h-6 w-6" />}
+            title={"Batch 2"}
             subtitle={"18 members"}
           />
         </div>
@@ -313,7 +409,7 @@ const Home = () => {
 
       <div className="mb-6 mt-6">
         <h4 className="text-xl font-bold text-navy-700 dark:text-white">
-          Notifications
+          Location Mapping
         </h4>
         <div className="mt-4 w-full h-[65vh] bg-white rounded-2xl p-4">
           <MapboxComponent />

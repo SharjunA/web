@@ -32,7 +32,7 @@ function TopCreatorTable(props) {
       {/* Top Creator Header */}
       <div className="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pt-4 pb-[20px] shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
         <h4 className="text-lg font-bold text-navy-700 dark:text-white">
-          Top Creators
+          Avalanche Prediction
         </h4>
         <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
           See all
@@ -69,28 +69,43 @@ function TopCreatorTable(props) {
                 <tr {...row.getRowProps()} key={index}>
                   {row.cells.map((cell, index) => {
                     let data = "";
-                    if (cell.column.Header === "Name") {
-                      data = (
-                        <div className="flex items-center gap-2">
-                          <div className="h-[30px] w-[30px] rounded-full">
-                            <img
-                              src={cell.value[1]}
-                              className="h-full w-full rounded-full"
-                              alt=""
-                            />
-                          </div>
-                          <p className="text-sm font-medium text-navy-700 dark:text-white">
-                            {cell.value[0]}
-                          </p>
-                        </div>
-                      );
-                    } else if (cell.column.Header === "Artworks") {
+                    if (cell.column.Header === "Time") {
                       data = (
                         <p className="text-md font-medium text-gray-600 dark:text-white">
                           {cell.value}
                         </p>
                       );
-                    } else if (cell.column.Header === "Rating") {
+                    } else if (cell.column.Header === "Temperature") {
+                      data = (
+                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                          {cell.value}
+                        </p>
+                      );
+                    } else if (cell.column.Header === "Precipition") {
+                      data = (
+                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                          {cell.value}
+                        </p>
+                      );
+                    } else if (cell.column.Header === "Humidity") {
+                      data = (
+                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                          {cell.value}
+                        </p>
+                      );
+                    } else if (cell.column.Header === "Wind Speed") {
+                      data = (
+                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                          {cell.value}
+                        </p>
+                      );
+                    } else if (cell.column.Header === "Snowfall Intensity") {
+                      data = (
+                        <p className="text-md font-medium text-gray-600 dark:text-white">
+                          {cell.value}
+                        </p>
+                      );
+                    } else if (cell.column.Header === "Chance of Avalache") {
                       data = (
                         <div class="mx-2 flex font-bold">
                           <Progress width="w-16" value={cell.value} />

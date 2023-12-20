@@ -65,11 +65,11 @@ export const columnsDataComplex = [
     accessor: "location",
   },
   {
-    Header: "Temperature",
+    Header: "Temperature (°C)",
     accessor: "temperature",
   },
   {
-    Header: "Wind Speed",
+    Header: "Wind Speed (kmph)",
     accessor: "wind_speed",
   },
   {

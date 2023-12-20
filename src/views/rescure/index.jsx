@@ -2,7 +2,8 @@ import React from 'react'
 
 function Rescure() {
   return (
-    <div>Rescure</div>
+    
+    <div>Rescue</div>
   )
 }
 

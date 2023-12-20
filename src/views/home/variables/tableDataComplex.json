@@ -3,17 +3,17 @@
     "name": [
       "Maninder Singh"
     ],
-    "location": "9821",
-    "temperature": 30,
+    "location": "35°30'27.5''N 76°59'12.9''E",
+    "temperature": -9,
     "wind_speed": 15,
     "snow_density": 50
   },
   {
     "name": [
-      "Mukesh Agarwal"
+      "Shiva Chauhan"
     ],
-    "location": "9821",
-    "temperature": 30,
+    "location": "35°35'57.1''N 76°39'03.6''E",
+    "temperature": -9,
     "wind_speed": 15,
     "snow_density": 50
   },
@@ -21,18 +21,18 @@
     "name": [
       "Thippu"
     ],
-    "location": "9821",
-    "temperature": 30,
-    "wind_speed": 15,
+    "location": "35°20'15.1''N 76°20'34.3''E",
+    "temperature": -9,
+    "wind_speed": 16,
     "snow_density": 50
   },
   {
     "name": [
       "Arjun Varma"
     ],
-    "location": "9821",
-    "temperature": 30,
-    "wind_speed": 15,
+    "location": "34°56'25.5''N 77°13''46.7''E",
+    "temperature": -9,
+    "wind_speed": 13,
     "snow_density": 50
   }
 ]

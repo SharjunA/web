@@ -28,22 +28,10 @@ const routes = [
     component: <Alert />,
   },
   {
-    name: "Rescue",
-    path: "Rescue",
-    icon: <MdModeOfTravel className="h-6 w-6" />,
-    component: <Rescure />,
-  },
-  {
     name: "Monitor AI",
     icon: <BsStars className="h-6 w-6" />,
     path: "monitor-ai",
     component: <MonitorAI />,
-  },
-  {
-    name: "Network",
-    path: "network",
-    icon: <GiMeshNetwork className="h-6 w-6" />,
-    component: <Network />,
   },
 ];
 export default routes;
